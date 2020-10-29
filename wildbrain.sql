@@ -25,3 +25,12 @@ INSERT INTO `deck` (`name`) VALUES
 ('POO'),
 ('CSS'),
 ('HTML');
+
+INSERT INTO `card` (`question`, `answer`) VALUES
+('coucou?', 'coucou!'),
+('JS', 'bouuuuh'),
+('twig', 'top'),
+('POO', 'encapsulation, abstraction, polymorphisme, hérédité'),
+('CSS', 'pour les JS'),
+('HTML', 'toujours pour les JS');
+
