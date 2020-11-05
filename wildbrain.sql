@@ -34,3 +34,19 @@ INSERT INTO `card` (`question`, `answer`) VALUES
 ('CSS', 'pour les JS'),
 ('HTML', 'toujours pour les JS');
 
+CREATE TABLE `deck_card` (
+  `deck_id` INT,
+  `card_id` INT,
+  PRIMARY KEY (deck_id, card_id),
+);
+  
+ALTER TABLE deck_card
+ADD CONSTRAINT fk_deck_card_to_card      
+FOREIGN KEY (card_id)             
+REFERENCES card(id);
+
+ALTER TABLE deck_card
+ADD CONSTRAINT fk_deck_card_to_deck      
+FOREIGN KEY (deck_id)             
+REFERENCES deck(id);
+ 
