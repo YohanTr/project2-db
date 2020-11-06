@@ -49,4 +49,17 @@ ALTER TABLE deck_card
 ADD CONSTRAINT fk_deck_card_to_deck      
 FOREIGN KEY (deck_id)             
 REFERENCES deck(id);
- 
+
+CREATE TABLE `label` ( 
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  label_name VARCHAR(100) NOT NULL 
+);
+
+INSERT INTO `label` (`label_name`) VALUES
+('HTML'),
+('CSS'),
+('PHP'),
+('JavaScript'),
+('Symfony'),
+('React'),
+('NodeJS');
