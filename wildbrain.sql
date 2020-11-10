@@ -1,11 +1,4 @@
-
 --db_name: wild_brain
-
--- --------------------------------------------------------
-
---
--- Structure de la table `fiche`
---
 
 CREATE TABLE `card` (
   `id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -37,7 +30,7 @@ INSERT INTO `card` (`question`, `answer`) VALUES
 CREATE TABLE `deck_card` (
   `deck_id` INT,
   `card_id` INT,
-  PRIMARY KEY (deck_id, card_id),
+  PRIMARY KEY (deck_id, card_id)
 );
   
 ALTER TABLE deck_card
