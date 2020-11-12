@@ -58,3 +58,11 @@ INSERT INTO `label` (`label_name`) VALUES
 ('Symfony'),
 ('React'),
 ('NodeJS');
+
+CREATE TABLE `card_label` (
+  `label_id` INT NOT NULL ,
+  `card_id` INT NOT NULL ,
+  PRIMARY KEY (label_id, card_id),
+  CONSTRAINT fk_label_card_to_card FOREIGN KEY (card_id) REFERENCES card(id) ON DELETE CASCADE,
+  CONSTRAINT fk_label_card_to_label FOREIGN KEY (label_id) REFERENCES label(id) ON DELETE CASCADE
+);
