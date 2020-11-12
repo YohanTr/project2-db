@@ -28,9 +28,11 @@ INSERT INTO `card` (`question`, `answer`) VALUES
 ('HTML', 'toujours pour les JS');
 
 CREATE TABLE `deck_card` (
-  `deck_id` INT,
-  `card_id` INT,
-  PRIMARY KEY (deck_id, card_id)
+  `deck_id` INT NOT NULL ,
+  `card_id` INT NOT NULL ,
+  PRIMARY KEY (deck_id, card_id),
+  CONSTRAINT fk_deck_card_to_card FOREIGN KEY (card_id) REFERENCES card(id) ON DELETE CASCADE,
+  CONSTRAINT fk_deck_card_to_deck FOREIGN KEY (deck_id) REFERENCES deck(id) ON DELETE CASCADE
 );
   
 ALTER TABLE deck_card
